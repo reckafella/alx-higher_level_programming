@@ -10,6 +10,3 @@ def uppercase(str):
     for i in str:
         print("{:c}".format((ord(i)-32) if islower(i) else ord(i)), end='')
     print()
-
-
-uppercase("Mercy")

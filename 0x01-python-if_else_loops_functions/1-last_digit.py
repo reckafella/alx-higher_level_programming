@@ -7,7 +7,7 @@ if (number < 0):
     last = last * -1
 
 if (last == 0):
-    print(f"Last digit of {number} is {last_digit} and is zero.")
+    print(f"Last digit of {number} is {last} and is 0")
 elif (last > 5):
     print(f"Last digit of {number} is {last} and is greater than 5")
 elif (last < 6 and last != 0):

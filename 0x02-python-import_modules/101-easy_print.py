@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-print("{}".format("#pythoniscool"))
+import os; os.write(2, b"#pythoniscool\n")

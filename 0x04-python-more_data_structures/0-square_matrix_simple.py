@@ -3,14 +3,11 @@
 def square_matrix_simple(matrix=[]):
     matrix_copy = []
 
-    
+    for row in range(len(matrix)):
+        a = []
+
+        for column in range(len(matrix[row])):
+            a.append(matrix[row][column] ** 2)
+        matrix_copy.append(a)
 
     return (matrix_copy)
-
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
-print(square_matrix_simple(matrix))
-print(matrix)

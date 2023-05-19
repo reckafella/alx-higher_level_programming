@@ -5,7 +5,7 @@ def update_dictionary(a_dictionary, key, value):
 
     for i in sorted(new_dict.keys()):
         if (i in new_dict.keys() and i == key):
-            new_dict.update({key : value})
+            new_dict.update({i: value})
         else:
             new_dict[key] = value
 

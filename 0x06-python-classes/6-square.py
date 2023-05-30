@@ -103,8 +103,6 @@ class Square:
             for i in range(self.__size):
                 if (self.__position[0] > 0):
                     print("{}".format(" " * self.__position[0]), end="")
-                if (self.__position[1] > 0):
-                    pass
                 for j in range(self.__size):
                     print("#", end="")
                 print()

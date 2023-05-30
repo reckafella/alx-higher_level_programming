@@ -35,6 +35,28 @@ class Square:
         else:
             self.__size = size
 
+    @property
+    def size(self):
+        """
+        This method returns the current value of 'size'
+        """
+        return self.__size
+
+    @size.setter
+    def size(self, value):
+        """
+        Method validates the new value of size before updating size
+
+        Attributes:
+            value (int): integer passed to the class object
+        """
+        if (type(value) != int):
+            raise TypeError("size must be an integer")
+        elif (value < 0):
+            raise ValueError("size must be >= 0")
+        else:
+            self.__size = value
+
     def area(self):
         """
         A method that returns the current square area

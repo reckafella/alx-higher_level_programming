@@ -3,6 +3,8 @@
 This module define a class Square which is used to handle the
 the calculation of area of a square.
 """
+
+
 class Square:
     """
     An empty class that defines a square. The class does not do anything.

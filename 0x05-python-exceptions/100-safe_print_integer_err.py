@@ -8,6 +8,8 @@ def safe_print_integer_err(value):
         print("{:d}".format(value))
         return True
     except Exception:
-        print("Exception: {}".format(traceback.format_exc()
-                                     .strip().splitlines()[-1][12:]))
+        print("Exception: {}".format(traceback.
+                                     format_exc().
+                                     strip().
+                                     splitlines()[-1][12:]), file=sys.stderr)
         return False

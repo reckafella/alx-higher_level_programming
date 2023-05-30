@@ -1,15 +1,12 @@
 #!/usr/bin/python3
 
-import sys, traceback
+import sys
 
 
 def safe_print_integer_err(value):
     try:
         print("{:d}".format(value))
         return True
-    except Exception:
-        print("Exception: {}".format(traceback.
-                                     format_exc().
-                                     strip().
-                                     splitlines()[-1][12:]), file=sys.stderr)
+    except ValueError as ve:
+        print("Exception: {}".format(ve), file=sys.stderr)
         return False

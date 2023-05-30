@@ -38,9 +38,8 @@ class Square:
         else:
             self.__size = size
 
-        """ Validate position """
         if ((type(position) == tuple) and (len(position) == 2)):
-            self.__position = position
+            self.__position = tuple(position)
         else:
             raise TypeError("position must be a tuple of 2 positive integers")
 
@@ -90,7 +89,7 @@ class Square:
         """
 
         if ((type(value) == tuple) and (len(value) == 2)):
-            self.__position = value
+            self.__position = tuple(value)
         else:
             raise TypeError("position must be a tuple of 2 positive integers")
 

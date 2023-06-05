@@ -108,16 +108,16 @@ class Rectangle:
         """
         Return the string representation of the rectangle using # symbol
         """
-        one_line = ""
+        text = ""
         if (self.__height == 0 or self.__width == 0):
-            return one_line
+            return text
 
         for i in range(self.__height):
             if (i < (self.__height - 1)):
-                one_line += "{}\n".format(str(self.print_symbol) * self.__width)
+                text += "{}\n".format(str(self.print_symbol) * self.__width)
             else:
-                one_line += "{}".format(str(self.print_symbol) * self.__width)
-        return one_line
+                text += "{}".format(str(self.print_symbol) * self.__width)
+        return text
 
     def __del__(self):
         """

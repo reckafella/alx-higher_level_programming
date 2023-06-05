@@ -5,8 +5,12 @@
 
 class Rectangle:
     """ This class is a representation of a rectangle.
-    The class does nothing
+
+    Attributes:
+        number_of_instances (int): number of instances of the class object
     """
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """
         This initializes a class object with values of height and width
@@ -29,6 +33,8 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = height
+
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -111,3 +117,10 @@ class Rectangle:
             else:
                 one_line += "#" * self.__width
         return one_line
+
+    def __del__(self):
+        """
+        Detects an instance where a Rectangle object is deleted
+        """
+        Rectangle.number_of_instances -= 1
+        print("{}".format("Bye rectangle..."))

@@ -114,9 +114,9 @@ class Rectangle:
 
         for i in range(self.__height):
             if (i < (self.__height - 1)):
-                one_line += "{}\n".format(self.print_symbol * self.__width)
+                one_line += "{}\n".format(str(self.print_symbol) * self.__width)
             else:
-                one_line += "{}".format(self.print_symbol * self.__width)
+                one_line += "{}".format(str(self.print_symbol) * self.__width)
         return one_line
 
     def __del__(self):

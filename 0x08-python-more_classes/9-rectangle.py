@@ -164,4 +164,4 @@ class Rectangle:
 
         cls.__height = size
         cls.__width = size
-        return Rectangle(cls.__width, cls.__height)
+        return cls(cls.__width, cls.__height)

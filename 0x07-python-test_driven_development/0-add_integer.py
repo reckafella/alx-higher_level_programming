@@ -3,12 +3,16 @@
 """
 This module contains a function used to add two integer values
 and return the result
+Function: add_integer
 """
 
 
 def add_integer(a, b=98):
     """
     Return the sum of integer values a and b
+    Args:
+        a (int): integer
+        b (int): integer
     """
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")

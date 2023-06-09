@@ -1,0 +1,31 @@
+Tests on add_integers function
+
+1. import module
+    >>> add_integer = __import__("0-add_integer").add_integer
+
+
+2. Check for module docstrings
+    >>> module_docs = __import__("0-add_integer").__doc__
+    >>> len(module_docs) > 1
+    True
+
+3. Check function modules
+    >>> func_mod = add_integer.__doc__
+    >>> len(func_mod) > 1
+    True
+
+4. Check Return Value
+    >>> add_integer(1, 2)
+    3
+    >>> add_integer(0, -1.1)
+    -1
+
+    >>> add_integer(10, "Ten")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+    >>> add_integer("10", "Ten")
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer

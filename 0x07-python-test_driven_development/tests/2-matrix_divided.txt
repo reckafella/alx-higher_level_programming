@@ -1,0 +1,11 @@
+Tests for a function that divides all elements of a matrix by a value
+
+1. Check module docstring
+    >>> module = __import__("1-matrix_divided")
+    >>> len(module.__doc__) > 1
+    True
+
+2. Check function docstring
+    >>> len(module.matrix_divided.__doc__) > 1
+    True
+

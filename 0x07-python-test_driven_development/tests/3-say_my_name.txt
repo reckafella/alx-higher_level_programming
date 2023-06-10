@@ -1,0 +1,27 @@
+Tests for a function that prints My name is <first name> <last name>
+
+1. Check module docstring
+    >>> module = __import__("3-say_my_name")
+    >>> len(module.__doc__) > 1
+    True
+
+2. Check function docstring
+    >>> len(module.say_my_name.__doc__) > 1
+    True
+
+3. Check Return values
+    >>> module.say_my_name("John", "Smith")
+    My name is John Smith
+
+    >>> module.say_my_name("Bob")
+    My name is Bob 
+
+    >>> module.say_my_name(12, "White")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+    >>> module.say_my_name("Mike", 12)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string

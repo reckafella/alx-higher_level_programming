@@ -15,9 +15,10 @@ def text_indentation(text):
     Args:
         text: string
     """
-    
+
     if text is None:
-        raise TypeError("text_indentation() missing 1 required positional argument: 'text'")
+        raise TypeError("text_indentation() missing 1\
+                        required positional argument: 'text'")
     elif not isinstance(text, str):
         raise TypeError("text must be a string")
     else:

@@ -31,3 +31,8 @@ Tests on add_integers function
     Traceback (most recent call last):
     ...
     TypeError: a must be an integer
+
+    >>> module.add_integer(True)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer

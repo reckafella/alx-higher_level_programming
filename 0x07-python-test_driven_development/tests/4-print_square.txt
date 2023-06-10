@@ -1,0 +1,33 @@
+1. Check module docstring
+    >>> module = __import__("4-print_square")
+    >>> len(module.__doc__) > 1
+    True
+
+2. Check function docstring
+    >>> len(module.print_square.__doc__) > 1
+    True
+
+3. Check Return values
+    >>> module.print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+    >>> module.print_square("four")
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+    >>> module.print_square(5.5)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+    >>> module.print_square(-2)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
+
+    >>> module.print_square(0)
+    <BLANKLINE>

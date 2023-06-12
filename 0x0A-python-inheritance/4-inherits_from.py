@@ -6,7 +6,10 @@ a specified class """
 
 def inherits_from(obj, a_class):
     """
-    Return True if obj is an instance of a_class. False, otherwise.
+    Return True if obj is a subclass of a_class.
+    Exclude instances of the derived class
+    E.g: bool() returns False, but int() returns True
+    False, otherwise.
 
     Args:
         obj: an object

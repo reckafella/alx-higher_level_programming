@@ -1,0 +1,10 @@
+1. import module
+	>>> lp_mod = __import__("0-lookup")
+
+2. check module docstrings
+	>>> len(lp_mod.__doc__) > 1
+	True
+
+3. Check function docstrings
+	>>> len(lp_mod.lookup.__doc__) > 1
+	True

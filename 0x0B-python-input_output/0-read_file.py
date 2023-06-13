@@ -12,5 +12,7 @@ def read_file(filename=""):
     """
 
     with open(filename, 'rt', encoding='UTF8') as f:
-        print("{}".format(f.read()))
+        for line in f.readlines():
+            print("{}".format(line), end='')
+        print()
         f.close()

@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
-""" This module creates a class Rectangle that inherits properties of\
-BaseGeometry """
+""" This module creates a class Square that inherits properties of\
+Rectangle """
 
 
 Rectangle = __import__('9-rectangle').Rectangle

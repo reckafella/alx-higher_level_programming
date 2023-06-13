@@ -1,0 +1,26 @@
+1. import module
+    >>> ml_module = __import__("1-my_list")
+    >>> my_class = ml_module.MyList()
+
+2. check module docstrings
+    >>> len(ml_module.__doc__) > 1
+    True
+
+3. check class docstrings and instance docstrings
+    >>> len(my_class.__doc__) > 1
+    True
+
+    >>> len(my_class.__init__.__doc__) > 1
+    True
+
+    >>> len(my_class.print_sorted.__doc__) > 1
+    True
+
+4. check return values
+    >>> my_class.__init__()
+    >>> my_class.append(2)
+    >>> my_class.append(3)
+    >>> my_class.append(4)
+    >>> my_class.append(1)
+    >>> my_class.print_sorted()
+    [1, 2, 3, 4]

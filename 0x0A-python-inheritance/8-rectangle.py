@@ -2,7 +2,7 @@
 
 BaseGeometry = __import__("7-base_geometry").BaseGeometry
 
-""" This module creates a  class Rectangle that inherits from BaseGeometry\
+""" This module creates a class Rectangle that inherits properties of BaseGeometry\
 (7-base_geometry.py). """
 
 

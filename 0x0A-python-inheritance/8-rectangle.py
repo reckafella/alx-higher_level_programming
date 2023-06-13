@@ -1,15 +1,19 @@
 #!/usr/bin/python3
 
-BaseGeometry = __import__("7-base_geometry").BaseGeometry
+import importlib
 
-""" This module creates a class Rectangle that inherits properties of BaseGeometry\
-(7-base_geometry.py). """
+
+""" This module creates a class Rectangle that inherits properties of\
+BaseGeometry """
+
+
+BaseGeometry = importlib.import_module('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
     """ This class extends BaseGeometry """
 
     def __init__(self, width, height):
-        """ Initialize the current object """
-        self.__width = super().integer_validator("width", width)
-        self.__height = super().integer_validator("height", height)
+        """ Initialize the class """
+        self.__width = BaseGeometry.integer_validator(self, "width", width)
+        self.__height = BaseGeometry.integer_validator(self, "height", height)

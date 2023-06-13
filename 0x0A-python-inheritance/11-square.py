@@ -11,7 +11,7 @@ class Square(Rectangle):
     """ This class extends Rectangle """
 
     def __init__(self, size):
-        """ Initialize the square class """
+        """ Initialize the class """
         self.__size = super().integer_validator("size", size)
 
     def area(self):

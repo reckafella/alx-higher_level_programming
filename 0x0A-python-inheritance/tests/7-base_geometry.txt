@@ -1,0 +1,39 @@
+1. import module
+    >>> geom_module = __import__("7-base_geometry")
+    >>> my_class = geom_module.BaseGeometry()
+
+2. check module docstrings
+    >>> len(geom_module.__doc__) > 1
+    True
+
+3. check class docstrings and instance docstrings
+    >>> len(geom_module.BaseGeometry.__doc__) > 1
+    True
+
+    >>> len(geom_module.BaseGeometry.area.__doc__) > 1
+    True
+
+    >>> len(geom_module.BaseGeometry.integer_validator.__doc__) > 1
+    True
+
+4. check return values
+    >>> my_class.area()
+    Traceback (most recent call last):
+    ...
+    Exception: area() is not implemented
+
+    >>> my_class.integer_validator("name", "John")
+    Traceback (most recent call last):
+    ...
+    TypeError: name must be an integer
+
+    >>> my_class.integer_validator("age", 0)
+    Traceback (most recent call last):
+    ...
+    ValueError: age must be greater than 0
+
+    >>> my_class.integer_validator("distance", -30)
+    Traceback (most recent call last):
+    ...
+    ValueError: distance must be greater than 0
+    

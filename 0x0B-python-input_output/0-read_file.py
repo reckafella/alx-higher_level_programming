@@ -11,7 +11,7 @@ def read_file(filename=""):
         filename (str): name of file to open
     """
 
-    with open(filename, 'r', encoding='UTF8') as f:
+    with open(filename, encoding='UTF8') as f:
         for line in f:
             print("{}".format(line), end='')
         print()

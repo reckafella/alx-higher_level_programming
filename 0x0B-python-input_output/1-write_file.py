@@ -13,8 +13,8 @@ def write_file(filename="", text=""):
     """
     nchars = 0
 
-    with open(filename, 'w', encoding='UTF8') as f:        
+    with open(filename, 'w', encoding='UTF8') as f:
         for char in text:
             f.write(char)
             nchars += 1
-    return nchars    
+    return nchars

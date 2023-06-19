@@ -2,6 +2,7 @@
 
 """ Module contains the Base class that is imported by other classes """
 
+
 class Base:
     """Base class
 

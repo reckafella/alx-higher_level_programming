@@ -11,7 +11,7 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """ Method validates values passed as arguments """
-        super().__init__(id) """ Call Base with id """
+        super().__init__(id)
 
         if (type(width) != int):
             raise TypeError('width must be an integer')

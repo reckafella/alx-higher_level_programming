@@ -9,7 +9,8 @@ class Rectangle(Base):
     Rectangle: Inherits from Base
     """
 
-    print_symbol = '#'
+    hash_symbol = '#'
+    space_symbol = ' '
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """ Method validates values passed as arguments """
@@ -111,8 +112,10 @@ class Rectangle(Base):
         """ print in stdout the Rectangle instance with the character # """
 
         for i in range(self.__height):
+            if (self.__x > 0):
+                print('{}'.format(self.space_symbol * self.__x), end='')
             for j in range(self.__width):
-                print("{}".format(self.print_symbol), end='')
+                print("{}".format(self.hash_symbol), end='')
             print()
 
     def __str__(self):

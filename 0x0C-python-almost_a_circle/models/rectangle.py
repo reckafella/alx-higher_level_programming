@@ -110,7 +110,9 @@ class Rectangle(Base):
 
     def display(self):
         """ print in stdout the Rectangle instance with the character # """
-
+        
+        if (self.__y > 0):
+                print('{}'.format('\n' * self.__y), end='')
         for i in range(self.__height):
             if (self.__x > 0):
                 print('{}'.format(self.space_symbol * self.__x), end='')

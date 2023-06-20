@@ -9,6 +9,8 @@ class Rectangle(Base):
     Rectangle: Inherits from Base
     """
 
+    print_symbol = '#'
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """ Method validates values passed as arguments """
         super().__init__(id)
@@ -104,3 +106,11 @@ class Rectangle(Base):
     def area(self):
         """ Return area of the rectangle given width and height """
         return (self.__height * self.__width)
+
+    def display(self):
+        """ print in stdout the Rectangle instance with the character # """
+
+        for i in range(self.__height):
+            for j in range(self.__width):
+                print("{}".format(self.print_symbol), end='')
+            print()

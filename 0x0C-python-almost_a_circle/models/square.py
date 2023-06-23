@@ -28,7 +28,7 @@ class Square(Rectangle):
     def size(self):
         """ Return the value of size """
         return super().width
-    
+
     @size.setter
     def size(self, size):
         """
@@ -38,3 +38,5 @@ class Square(Rectangle):
             size (int): length of one side of square
         """
         Rectangle(width=size, height=size)
+        Rectangle.width = size
+        Rectangle.height = size

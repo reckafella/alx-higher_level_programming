@@ -11,7 +11,7 @@ class Square(Rectangle):
         Initialize Square by using logic of __init__ from Rectangle class
         """
         super().__init__(width=size, height=size, x=x, y=y, id=id)
-    
+
     def __str__(self):
         """ Override __str__ method from Rectangle class """
         return '[{}] ({}) {}/{} - {}'.format(self.__class__.__name__,

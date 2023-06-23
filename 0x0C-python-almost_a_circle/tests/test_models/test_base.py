@@ -8,8 +8,12 @@ from models.base import Base
 
 class TestBase(unittest.TestCase):
     def test_id_none(self):
-        id_none = Base()
-        self.assertEqual(id_none.id, 1)
+        first = Base()
+        second = Base()
+        third = Base()
+        self.assertEqual(first.id, 1)
+        self.assertEqual(second.id, 2)
+        self.assertEqual(third.id, 3)
 
     def test_id_given(self):
         id_given = Base(12)

@@ -126,3 +126,40 @@ class Rectangle(Base):
         return '[{}] ({}) {}/{} - {}/{}'.format(
             self.__class__.__name__, self.id, self.__x, self.__y,
             self.__width, self.__height)
+
+    def update(self, *args, **kwargs):
+        """
+        Assigns an argument to each attribute:
+
+        Args:
+            1st argument should be the id attribute
+            2nd argument should be the width attribute
+            3rd argument should be the height attribute
+            4th argument should be the x attribute
+            5th argument should be the y attribute
+        """
+        if args is not None and len(args) >= 1:
+            for i in range(len(args)):
+                if i == 0:
+                    self.id = args[i]
+                if i == 1:
+                    self.__width = args[i]
+                if i == 2:
+                    self.__height = args[i]
+                if i == 3:
+                    self.__x = args[i]
+                if i == 4:
+                    self.__y = args[i]
+        else:
+            if (kwargs is not None and len(kwargs) >= 1):
+                for key, value in kwargs.items():
+                    if (key == 'width'):
+                        self.__width = value
+                    if (key == 'height'):
+                        self.__height = value
+                    if (key == 'x'):
+                        self.__x = value
+                    if (key == 'id'):
+                        self.id = value
+                    if (key == 'y'):
+                        self.__y = value

@@ -73,5 +73,3 @@ class Square(Rectangle):
                         Rectangle.update(self, x=value)
                     if key == 'y':
                         Rectangle.update(self, y=value)
-
-

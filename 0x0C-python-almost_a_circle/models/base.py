@@ -28,7 +28,3 @@ class Base:
             return '{}'.format("\"[]\"")
         else:
             return json.dumps(list_dictionaries)
-
-    def save_to_file(cls, list_objs):
-        """ writes the JSON string representation of list_objs to a file """
-        pass

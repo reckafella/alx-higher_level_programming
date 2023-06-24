@@ -4,7 +4,7 @@
 from models.base import Base
 
 
-class Rectangle(Base):
+class Rectangle(Base, dict):
     """
     Rectangle: Inherits from Base
     """
@@ -163,3 +163,20 @@ class Rectangle(Base):
                         self.id = value
                     if (key == 'y'):
                         self.__y = value
+
+    def to_dictionary(self):
+        """ returns the dictionary representation of a Rectangle """
+        raw_dict = self.__dict__
+        mapper = {
+                '_Rectangle__width': 'width',
+                '_Rectangle__height': 'height',
+                'id': 'id',
+                '_Rectangle__x': 'x',
+                '_Rectangle__y': 'y'
+                }
+
+        mapped_dict = {
+            mapper.get(key, key): value for key, value in raw_dict.items()
+            }
+
+        return mapped_dict

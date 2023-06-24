@@ -73,6 +73,7 @@ class Square(Rectangle):
                         Rectangle.update(self, x=value)
                     if key == 'y':
                         Rectangle.update(self, y=value)
+
     def to_dictionary(self):
         """ returns the dictionary representation of a Square """
         raw_dict = self.__dict__

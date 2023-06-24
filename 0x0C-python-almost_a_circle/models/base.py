@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """ Module contains the Base class that is imported by other classes """
-
+import json
 
 class Base:
     """Base class
@@ -18,3 +18,8 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+    def to_json_string(list_dictionaries):
+        if (list_dictionaries is None or len(list_dictionaries) == 0):
+            return '"[]"'
+        else:
+            return json.dumps(list_dictionaries)

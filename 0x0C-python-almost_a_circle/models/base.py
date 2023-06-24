@@ -3,6 +3,7 @@
 """ Module contains the Base class that is imported by other classes """
 import json
 
+
 class Base:
     """Base class
 

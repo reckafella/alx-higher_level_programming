@@ -2,7 +2,8 @@
 
 """ Module contains the Base class that is imported by other classes """
 import json
-
+from models.rectangle import Rectangle
+from models.square import Square
 
 class Base:
     """Base class
@@ -23,6 +24,10 @@ class Base:
     def to_json_string(list_dictionaries):
         """ returns the JSON string representation of list_dictionaries """
         if (list_dictionaries is None or len(list_dictionaries) == 0):
-            return '"[]"'
+            return '{}'.format("\"[]\"")
         else:
             return json.dumps(list_dictionaries)
+    
+    def save_to_file(cls, list_objs):
+        """ writes the JSON string representation of list_objs to a file """
+        pass

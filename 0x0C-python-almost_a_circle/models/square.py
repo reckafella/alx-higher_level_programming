@@ -73,3 +73,19 @@ class Square(Rectangle):
                         Rectangle.update(self, x=value)
                     if key == 'y':
                         Rectangle.update(self, y=value)
+    def to_dictionary(self):
+        """ returns the dictionary representation of a Square """
+        raw_dict = self.__dict__
+        mapper = {
+                '_Rectangle__width': 'size',
+                '_Rectangle__height': 'size',
+                'id': 'id',
+                '_Rectangle__x': 'x',
+                '_Rectangle__y': 'y'
+                }
+
+        mapped_dict = {
+            mapper.get(key, key): value for key, value in raw_dict.items()
+            }
+
+        return mapped_dict

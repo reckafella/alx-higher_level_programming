@@ -13,7 +13,16 @@ class Rectangle(Base, dict):
     space_symbol = ' '
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """ Method validates values passed as arguments """
+        """
+        Method validates values passed as arguments
+
+        Args:
+            width (int)
+            height (int)
+            x (int)
+            y (int)
+            id (int)
+        """
         super().__init__(id)
 
         if (type(width) != int):
@@ -51,7 +60,12 @@ class Rectangle(Base, dict):
 
     @width.setter
     def width(self, value):
-        """ Set value of width """
+        """
+        Set value of width
+
+        Args:
+            value (int)
+        """
         if (type(value) != int):
             raise TypeError('width must be an integer')
         elif (value <= 0):
@@ -66,7 +80,12 @@ class Rectangle(Base, dict):
 
     @height.setter
     def height(self, value):
-        """ Set value of height """
+        """
+        Set value of height
+
+        Args:
+            value (int)
+        """
         if (type(value) != int):
             raise TypeError('height must be an integer')
         elif (value <= 0):
@@ -81,7 +100,12 @@ class Rectangle(Base, dict):
 
     @x.setter
     def x(self, value):
-        """ Set value of x """
+        """
+        Set value of x
+
+        Args:
+            value (int)
+        """
         if (type(value) != int):
             raise TypeError('x must be an integer')
         elif (value < 0):
@@ -96,7 +120,12 @@ class Rectangle(Base, dict):
 
     @y.setter
     def y(self, value):
-        """ Set value of y """
+        """
+        Set value of y
+
+        Args:
+            value (int)
+        """
         if (type(value) != int):
             raise TypeError('y must be an integer')
         elif (value < 0):
@@ -165,7 +194,9 @@ class Rectangle(Base, dict):
                         self.__y = value
 
     def to_dictionary(self):
-        """ returns the dictionary representation of a Rectangle """
+        """
+        Returns the dictionary representation of a Rectangle
+        """
         raw_dict = self.__dict__
         mapper = {
                 '_Rectangle__width': 'width',

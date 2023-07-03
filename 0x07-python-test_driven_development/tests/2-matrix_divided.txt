@@ -1,7 +1,7 @@
 Tests for a function that divides all elements of a matrix by a value
 
 1. Check module docstring
-    >>> module = __import__("1-matrix_divided")
+    >>> module = __import__("2-matrix_divided")
     >>> len(module.__doc__) > 1
     True
 
@@ -9,3 +9,31 @@ Tests for a function that divides all elements of a matrix by a value
     >>> len(module.matrix_divided.__doc__) > 1
     True
 
+3. check return values
+    >>> module.matrix_divided(2, 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> module.matrix_divided([1, 2, 3], 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> module.matrix_divided([[1, 2, 3], [2, 3, 4]], 0)
+    Traceback (most recent call last):
+    ...
+    ZeroDivisionError: division by zero
+
+    >>> module.matrix_divided([[1, 2], [2, 3, 4]], 0)
+    Traceback (most recent call last):
+    ...
+    ValueError: Each row of the matrix must have the same size
+
+    >>> module.matrix_divided([[1, 2, 3], [4, 5, 6]], 3)
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+    >>> module.matrix_divided([[1, 2, 3], [4, 5, 6]], "rem")
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number

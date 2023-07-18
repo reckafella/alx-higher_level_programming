@@ -31,31 +31,34 @@ def matrix_divided(matrix, div):
         A new matrix if no error occurs.
     """
 
-    if not isinstance(matrix, list)\
-        or not all(isinstance(row, list) for row in matrix)\
-        or not all((
-            isinstance(
-            value, (int, float)) for value in row) for row in matrix):
-        raise TypeError(
-            "matrix must be a matrix (list of lists) of integers/floats")
+    if not isinstance(matrix, list) or not all(
+        isinstance(row, list) for row in matrix):
+            raise TypeError(
+                "matrix must be a matrix (list of lists) of integers/floats")
 
-    elif not all(len(row) == len(matrix[0]) for row in matrix):
+    for row in matrix:
+        if all(isinstance(elem, (int, float)) for elem in row):
+            pass
+        else:
+            raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+
+    if not all(len(row) == len(matrix[0]) for row in matrix):
         raise ValueError("Each row of the matrix must have the same size")
 
-    elif not (isinstance(div, (float, int))):
+    if not (isinstance(div, (float, int))):
         raise TypeError("div must be a number")
 
-    elif (div == 0):
+    if (div == 0):
         raise ZeroDivisionError("division by zero")
 
-    else:
-        new = []
 
-        for row in matrix:
-            new_row = []
-            for element in row:
-                new_element = round(element / div, 2)
-                new_row.append(new_element)
-            new.append(new_row)
+    new = []
 
-        return new
+    for row in matrix:
+        new_row = []
+        for element in row:
+            new_element = round(element / div, 2)
+            new_row.append(new_element)
+        new.append(new_row)
+
+    return new

@@ -11,3 +11,17 @@
 * All SQL keywords should be in uppercase (SELECT, WHERE…)
 * A README.md file, at the root of the folder of the project, is mandatory
 * The length of your files will be tested using wc
+
+## **Tasks**:
+0. List databases - a script that lists all databases of your MySQL server.
+
+1. Create a database - a script that creates the database hbtn_0c_0 in your MySQL server.
+	* If the database hbtn_0c_0 already exists, your script should not fail
+	* You are not allowed to use the SELECT or SHOW statements
+
+2. Delete a database - a script that deletes the database hbtn_0c_0 in your MySQL server.
+	* If the database hbtn_0c_0 doesn’t exist, your script should not fail
+	* You are not allowed to use the SELECT or SHOW statements
+
+3. List tables - a script that lists all the tables of a database in your MySQL server.
+	* The database name will be passed as argument of mysql command.

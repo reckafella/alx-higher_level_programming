@@ -7,6 +7,7 @@
 -- the list should be sorted by the number of records (desc)
 -- database name passed as an argument of the `mysql` command.
 
-SELECT DISTINCT `score`, COUNT(`score`) AS `number`
+SELECT `score`, COUNT(`score`) AS `number`
 FROM `second_table`
+GROUP BY `score`
 ORDER BY `number` DESC;

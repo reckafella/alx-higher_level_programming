@@ -5,7 +5,9 @@
 -- You are not allowed to use the JOIN keyword
 -- The database name will be passed as an argument of the mysql command
 
-SELECT `cities`.`id`, `cities`.`name`
+SELECT `id`, `name`
 FROM `cities`
-INNER JOIN `states`
-ON `states`.`id` = `cities`.`state_id`;
+WHERE `state_id` = (
+    SELECT `id` FROM `states` WHERE `name` = 'California';
+)
+ORDER BY `cities`.`id` ASC;

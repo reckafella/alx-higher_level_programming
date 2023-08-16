@@ -10,7 +10,6 @@ module.exports = class Rectangle {
   }
 
   print () {
-    // prints the rectangle using the character X
     for (let i = 0; i < this.height; i++) {
       const array = [];
       for (let j = 0; j < this.width; j++) {
@@ -21,14 +20,12 @@ module.exports = class Rectangle {
   }
 
   rotate () {
-    // exchanges the width and the height of the rectangle
     this.#temp = this.height;
     this.height = this.width;
     this.width = this.#temp;
   }
 
   double () {
-    // multiples the width and the height of the rectangle by 2
     this.height *= 2;
     this.width *= 2;
   }

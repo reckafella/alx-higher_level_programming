@@ -9,9 +9,7 @@ module.exports = class Square extends Rectangle {
   }
 
   charPrint (c) {
-    if (!c) {
-      super.print();
-    } else {
+    if (c) {
       for (let i = 0; i < this.size; i++) {
         const array = [];
         for (let j = 0; j < this.size; j++) {
@@ -19,6 +17,8 @@ module.exports = class Square extends Rectangle {
         }
         console.log(array.join(''));
       }
+    } else {
+      this.print();
     }
   }
 };

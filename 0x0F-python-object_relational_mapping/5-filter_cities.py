@@ -19,11 +19,14 @@ if __name__ == '__main__':
 
     results = cursor.fetchall()
 
-    for i in range(len(results)):
-        if i < len(results) - 1:
-            print(results[i][0], end=", ")
-        else:
-            print(results[i][0])
+    if len(results) == 0:
+        print()
+    else:
+        for i in range(len(results)):
+            if i < len(results) - 1:
+                print(results[i][0], end=", ")
+            else:
+                print(results[i][0])
 
     cursor.close()
     db.close()

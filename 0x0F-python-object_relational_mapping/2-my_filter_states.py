@@ -12,7 +12,7 @@ if __name__ == '__main__':
                          passwd=argv[2], db=argv[3], port=3306)
 
     cursor = db.cursor()
-    query = "SELECT * FROM `states` WHERE `states`.`name` = '{}'".format(match)
+    query = "SELECT * FROM `states` WHERE `states`.`name` = '{}' ORDER BY `states`.`id`".format(match)
     cursor.execute(query)
 
     query_results = cursor.fetchall()

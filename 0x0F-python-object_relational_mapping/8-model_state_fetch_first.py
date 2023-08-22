@@ -23,8 +23,7 @@ if __name__ == '__main__':
     result = session.query(State).first()
 
     if (result is None):
-        # print()
-        pass
+        print()
     else:
         print('{}: {}'.format(result.id, result.name))
 

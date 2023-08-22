@@ -26,8 +26,7 @@ if __name__ == '__main__':
     # pull all records from the database
     try:
         result = session.query(State).filter(text("name=:name"))\
-        .params(name=av[4]).one()
-
+            .params(name=av[4]).one()
         print('{}'.format(result.id))
     except NoResultFound:
         print('Not Found')

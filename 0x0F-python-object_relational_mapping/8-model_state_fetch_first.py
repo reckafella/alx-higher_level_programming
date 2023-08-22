@@ -22,6 +22,10 @@ if __name__ == '__main__':
     # pull all records from the database
     result = session.query(State).first()
 
-    print('{}: {}'.format(result.id, result.name))
+    if (result is None):
+        # print()
+        pass
+    else:
+        print('{}: {}'.format(result.id, result.name))
 
     session.close()

@@ -21,7 +21,8 @@ if __name__ == '__main__':
     session = Session()
 
     # pull all records from the database
-    result = session.query(State).filter(State.name.like('%a%')).order_by(State.id)
+    result = session.query(State).filter(State.name.like('%a%'))\
+        .order_by(State.id)
 
     if result is None:
         print()

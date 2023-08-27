@@ -24,12 +24,11 @@ if __name__ == '__main__':
     session = Session()
 
     # pull all records from the database
-    result = session.query(State)
-    result = result.filter(text("name=:name")).params(name=av[4]).one_or_none()
-
-    if result is None:
-        print('Not Found')
-    else:
+    try:
+        result = session.query(State).filter(text("name=:name"))\
+            .params(name=av[4]).one()
         print('{}'.format(result.id))
+    except NoResultFound:
+        print('Not Found')
 
     session.close()

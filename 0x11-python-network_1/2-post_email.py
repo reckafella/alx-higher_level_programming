@@ -18,4 +18,4 @@ if __name__ == '__main__':
 
     with urlreq.urlopen(request) as response:
         result = response.read().decode('utf-8')
-        print('Your email is: {}'.format(result))
+        print('{}'.format(result))

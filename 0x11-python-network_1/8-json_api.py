@@ -18,10 +18,12 @@ import requests
 
 if __name__ == '__main__':
     url = 'http://0.0.0.0:5000/search_user'
-    if sys.argv[1]:
+
+    try:
         q = sys.argv[1]
-    else:
+    except IndexError:
         q = ""
+
     try:
         with requests.post(url, data=q) as response:
             result = response.json()

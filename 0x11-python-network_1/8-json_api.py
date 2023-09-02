@@ -17,9 +17,18 @@ import sys
 import requests
 
 if __name__ == '__main__':
-    url = sys.argv[1]
-    if sys.argv[2]:
-        q = sys.argv[2]
+    url = 'http://0.0.0.0:5000/search_user'
+    if sys.argv[1]:
+        q = sys.argv[1]
     else:
         q = ""
-    
+    try:
+        with requests.post(url, data=q) as response:
+            result = response.json()
+            if result:
+                print('[{}] {}'.format(result.get('id'), result.get('name')))
+            else:
+                print('No result')
+
+    except requests.exceptions.JSONDecodeError as e:
+        print('Not a valid JSON')

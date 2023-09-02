@@ -25,7 +25,7 @@ if __name__ == '__main__':
         q = ""
 
     try:
-        with requests.post(url, data=q) as response:
+        with requests.post(url, json=q) as response:
             result = response.json()
             if result:
                 print('[{}] {}'.format(result.get('id'), result.get('name')))

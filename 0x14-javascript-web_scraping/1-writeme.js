@@ -8,6 +8,5 @@ const stringToWrite = args[1];
 fs.writeFile(fileName, stringToWrite, 'utf-8', (err) => {
   if (err) {
     console.error(err);
-    return;
   }
 });

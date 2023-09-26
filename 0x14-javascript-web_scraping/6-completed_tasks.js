@@ -23,6 +23,6 @@ request(requestURL, function (_err, _response, body) {
   }
 
   for (const userID in completedJobs) {
-    console.log(`'${userID}', ${completedJobs[userID]}`);
+    console.log(`'${userID}': ${completedJobs[userID]}`);
   }
 });

@@ -11,14 +11,13 @@ request(requestURL, function (_err, _response, body) {
 
   for (const user of users) {
     const userID = user.userId;
-    const completed = user.completed;
 
     if (!completedJobs[userID]) {
       completedJobs[userID] = 0;
     }
 
-    if (completed) {
-      completedJobs[userID]++;
+    if (user.completed) {
+        completedJobs[userID]++;
     }
   }
 
